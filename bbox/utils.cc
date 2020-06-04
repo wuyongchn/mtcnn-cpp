@@ -1,9 +1,22 @@
-#include "utils.h"
+/*  Copyright (C) <2020>  <Yong WU>
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include "bbox/utils.h"
 
 #include <algorithm>
 
 namespace utils {
-  
+
 float BBoxIoU(const BBox& bbox1, const BBox& bbox2, IouMethod method) {
   float inner_tlx = std::max<float>(bbox1.tl.x, bbox2.tl.x);
   float inner_tly = std::max<float>(bbox1.tl.y, bbox2.tl.y);
