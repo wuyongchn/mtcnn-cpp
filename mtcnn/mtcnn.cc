@@ -28,7 +28,7 @@ MTCNN::MTCNN(const std::vector<std::string>& model_files,
   CHECK_EQ(model_files.size(), trained_files.size());
   CHECK_EQ(model_files.size(), params_.stage_num);
 #ifdef CPU_ONLY
-  caffe::Caffe::set_mode(caffe::CPU);
+  caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
   caffe::Caffe::set_mode(caffe::Caffe::GPU);
 #endif
