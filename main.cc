@@ -7,7 +7,7 @@ int main(int argc, char* argv[]) {
     std::cout << argv[0] << " model_path image_path <min_size>" << std::endl;
     exit(0);
   }
-  ::google::InitGoogleLogging("");
+  ::google::InitGoogleLogging(argv[0]);
   std::vector<std::string> model_file = {
       std::string(argv[1]) + "/pnet.prototxt",
       std::string(argv[1]) + "/rnet.prototxt",
